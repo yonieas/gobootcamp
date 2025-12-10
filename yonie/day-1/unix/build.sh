@@ -12,13 +12,7 @@ echo "Go, often referred to as Golang, is an open-source programming language de
 echo "Create $FILE_DIR/file2.txt"
 echo "Common applications of Golang include: Web development (especially for backend services and APIs), Cloud and network programming, Building command-line tools, Developing microservices, and System programming and infrastructure tools." > $FILE_DIR/file2.txt
 
-echo "Building gocat..."
-go build -o $OUTPUT_DIR/gocat ./cmd/cat
-
-echo "Building godate..."
-go build -o $OUTPUT_DIR/godate ./cmd/date
-
-echo "Building goseq..."
-go build -o $OUTPUT_DIR/goseq ./cmd/seq
+echo "Building binary..."
+go build -o $OUTPUT_DIR ./cmd/...
 
 ls -l $OUTPUT_DIR
